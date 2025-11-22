@@ -13,7 +13,7 @@ PermitEmptyPasswords no
 
 PubkeyAuthentication yes
 StrictModes yes
-AuthorizedKeysFile /etc/ssh/authorized_keys
+AuthorizedKeysFile /etc/ssh/keys/authorized_keys
 
 PermitTTY yes
 AllowTcpForwarding yes
@@ -24,4 +24,3 @@ ClientAliveCountMax 2
 
 Subsystem sftp internal-sftp
 LogLevel VERBOSE
-
