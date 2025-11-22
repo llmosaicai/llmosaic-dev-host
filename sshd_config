@@ -1,0 +1,27 @@
+Port 22
+Protocol 2
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+PermitRootLogin no
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+PermitEmptyPasswords no
+
+PubkeyAuthentication yes
+StrictModes yes
+AuthorizedKeysFile /etc/ssh/authorized_keys
+
+PermitTTY yes
+AllowTcpForwarding yes
+X11Forwarding no
+AllowAgentForwarding no
+ClientAliveInterval 120
+ClientAliveCountMax 2
+
+Subsystem sftp internal-sftp
+LogLevel VERBOSE
+
