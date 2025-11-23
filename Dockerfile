@@ -6,7 +6,16 @@ ENV DEBIAN_FRONTEND=noninteractive \
     SSH_GID=1000
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends openssh-server ca-certificates \
+ && apt-get install -y --no-install-recommends \
+    openssh-server \
+    ca-certificates \
+    curl wget \
+    git \
+    tar gzip bzip2 xz-utils unzip \
+    build-essential \
+    python3 python3-venv python3-pip \
+    procps less nano \
+    iproute2 dnsutils netcat-traditional \
  && rm -rf /var/lib/apt/lists/* \
  && mkdir -p /var/run/sshd /etc/ssh /home/${SSH_USER}/.ssh /workspace/repos
 
@@ -22,4 +31,3 @@ VOLUME ["/workspace/repos"]
 EXPOSE 22
 
 CMD ["/entrypoint.sh"]
-
