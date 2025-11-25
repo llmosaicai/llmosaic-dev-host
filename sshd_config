@@ -12,7 +12,7 @@ UsePAM yes
 PermitEmptyPasswords no
 
 PubkeyAuthentication yes
-StrictModes yes
+StrictModes no
 AuthorizedKeysFile /etc/ssh/keys/authorized_keys
 
 PermitTTY yes
